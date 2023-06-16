@@ -12,7 +12,7 @@ const products = {
 };
 const checkInterval = 300000; // 5 minutes in milliseconds
 const emailAddresses = {
-    anthony: '5157058449@vtext.com'
+    your_name: 'phone_number@provider.com'
 };
 
 let logs = [];
@@ -30,15 +30,15 @@ async function sendEmail(product, elementId) {
     const transporter = nodemailer.createTransport({
         service: 'gmail', // This assumes you're using Gmail
         auth: {
-            user: 'tuffant21@gmail.com', // replace with your email
-            pass: 'duldpbkbhganbsjj' // replace with your password
+            user: 'your@email.com', // replace with your email
+            pass: 'your_password' // replace with your password
         }
     });
 
     // loop over email addresses and email each
     for (const [name, emailAddress] of Object.entries(emailAddresses)) {
         const info = await transporter.sendMail({
-            from: 'tuffant21@gmail.com', // sender address
+            from: 'your@email.com', // sender address
             to: emailAddress, // list of receivers
             subject: '', // Subject line
             text: `The ${product} at ${url}${elementId} is now in stock.` // plain text body
