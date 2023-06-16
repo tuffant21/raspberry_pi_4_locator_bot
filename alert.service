@@ -1,0 +1,14 @@
+# /lib/systemd/system/alert.service
+[Unit]
+Description=Alert Node.js Application Docker Container
+Wants=docker.service
+After=docker.service
+
+[Service]
+Restart=always
+RestartSec=3
+ExecStart=/usr/bin/docker run -p 80:8080 --rm --name alert alert
+ExecStop=/usr/bin/docker stop -t 2 alert
+
+[Install]
+WantedBy=default.target
