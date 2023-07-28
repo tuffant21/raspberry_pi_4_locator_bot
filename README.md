@@ -1,3 +1,5 @@
+## Updating app.js
+
 Enter your email on these lines
 1. https://github.com/tuffant21/raspberry_pi_4_locator_bot/blob/160a526c6af79415c433b499cd0a614d7052ef0d/app.js#L33
 2. https://github.com/tuffant21/raspberry_pi_4_locator_bot/blob/160a526c6af79415c433b499cd0a614d7052ef0d/app.js#L41
@@ -23,17 +25,21 @@ https://github.com/tuffant21/raspberry_pi_4_locator_bot/blob/160a526c6af79415c43
 Enter your phone number before the @ symbol on this
 https://github.com/tuffant21/raspberry_pi_4_locator_bot/blob/160a526c6af79415c433b499cd0a614d7052ef0d/app.js#L15
 
+## Build Docker Image
+
 Build the docker image
 `docker build -t alert .`
 
 On M1 macs
 `docker build -t alert --platform linux/arm64/v8 .`
 
-Running the docker image locally
+## Run the docker image locally
 
 Start: `docker run --rm --name alert alert`
 
 Stop: `docker stop -t 2 alert`
+
+## Creating a linux service
 
 To start the service on debian, move the file alert.service to `/lib/systemd/system/alert.service`
 Then run the following commands
