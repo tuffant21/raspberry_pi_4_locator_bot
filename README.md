@@ -28,3 +28,8 @@ Build the docker image
 
 On M1 macs
 `docker build -t alert --platform linux/arm64/v8 .`
+
+To start the service on debian, move the file alert.service to `/lib/systemd/system/alert.service`
+Then run the following commands
+* sudo systemctl enable alert.service
+* sudo systmctl start alert.service
