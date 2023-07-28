@@ -24,4 +24,7 @@ Enter your phone number before the @ symbol on this
 https://github.com/tuffant21/raspberry_pi_4_locator_bot/blob/160a526c6af79415c433b499cd0a614d7052ef0d/app.js#L15
 
 Build the docker image
-docker build -t alert .
+`docker build -t alert .`
+
+On M1 macs
+`docker build -t alert --platform linux/arm64/v8 .`
