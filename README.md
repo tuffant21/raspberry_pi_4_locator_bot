@@ -30,7 +30,9 @@ On M1 macs
 `docker build -t alert --platform linux/arm64/v8 .`
 
 Running the docker image locally
+
 Start: `docker run --rm --name alert alert`
+
 Stop: `docker stop -t 2 alert`
 
 To start the service on debian, move the file alert.service to `/lib/systemd/system/alert.service`
