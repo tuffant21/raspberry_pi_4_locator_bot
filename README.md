@@ -31,5 +31,5 @@ On M1 macs
 
 To start the service on debian, move the file alert.service to `/lib/systemd/system/alert.service`
 Then run the following commands
-* sudo systemctl enable alert.service
-* sudo systmctl start alert.service
+* `sudo systemctl enable alert.service`
+* `sudo systmctl start alert.service`
